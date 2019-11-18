@@ -25,16 +25,16 @@ namespace ModMenuSpace
 	public class ModMenu : MonoBehaviour
 	{
 			// Variables needed for menu
-		public static string MenuLabel = "<color=yellow>MOD MENU TITLE</color>"
+		public static string MenuLabel = "MOD MENU TITLE";
 		public static bool MenuVisible = false;
 		public static bool Cheat1Active = false;
-		public static string Cheat1Label = "<color=red>Cheat 1 OFF</color>";
+		public static string Cheat1Label = "Cheat 1 OFF";
 		public static bool Cheat2Active = false;
-		public static string Cheat2Label = "<color=red>Cheat 2 OFF</color>";
+		public static string Cheat2Label = "Cheat 2 OFF";
 		public static bool Cheat3Active = false;
-		public static string Cheat3Label = "<color=red>Cheat 3 OFF</color>";
+		public static string Cheat3Label = "Cheat 3 OFF";
 		public static bool Cheat4Active = false;
-		public static string Cheat4Label = "<color=red>Cheat 4 OFF</color>";
+		public static string Cheat4Label = "Cheat 4 OFF";
 
 		public static void DrawMenu()
 		{
@@ -43,7 +43,7 @@ namespace ModMenuSpace
 			    // Toggle Menu button (always visible)
 			GUI.backgroundColor = new Color(1f,1f,1f,1f);
 			GUI.color = new Color(1f,1f,1f,1f);
-			if (GUI.Button(new Rect(0f,0f,100f,30f),"<color=yellow>Toggle Menu</color>"))
+			if (GUI.Button(new Rect(0f,0f,100f,30f),"Toggle Menu"))
 			{
 				MenuVisible = !MenuVisible;
 			}
@@ -55,7 +55,7 @@ namespace ModMenuSpace
     			    // Cheat Header and Canvas
                 GUI.backgroundColor = new Color(1f,1f,1f,1f);
 			    GUI.color = new Color(1f,1f,1f,1f);
-				GUI.Box(new Rect(100f,0f,500f,400f),"<color=white>Mod Menu</color>");
+				GUI.Box(new Rect(100f,0f,500f,400f),"Mod Menu");
 
                     // Cheat 1 Button
                 GUI.backgroundColor = new Color(32f,100f,25f,1f);
@@ -66,9 +66,9 @@ namespace ModMenuSpace
 
                     if (Cheat1Active) 
                     { 
-                        Cheat1Label = "<color=green>Cheat 1 ON</color>"; 
+                        Cheat1Label = "Cheat 1 ON"; 
                     } else { 
-                        Cheat1Label = "<color=red>Cheat 1 OFF</color>"; 
+                        Cheat1Label = "Cheat 1 OFF"; 
                     }
 			    }
 
@@ -81,9 +81,9 @@ namespace ModMenuSpace
 
                     if (Cheat2Active) 
                     { 
-                        Cheat2Label = "<color=green>Cheat 2 ON</color>"; 
+                        Cheat2Label = "Cheat 2 ON"; 
                     } else { 
-                        Cheat2Label = "<color=red>Cheat 2 OFF</color>"; 
+                        Cheat2Label = "Cheat 2 OFF"; 
                     }
 			    }
 
@@ -96,9 +96,9 @@ namespace ModMenuSpace
 
                     if (Cheat3Active) 
                     { 
-                        Cheat3Label = "<color=green>Cheat 3 ON</color>"; 
+                        Cheat3Label = "Cheat 3 ON"; 
                     } else { 
-                        Cheat3Label = "<color=red>Cheat 3 OFF</color>"; 
+                        Cheat3Label = "Cheat 3 OFF"; 
                     }
 			    }
 
@@ -111,9 +111,9 @@ namespace ModMenuSpace
 
                     if (Cheat4Active) 
                     { 
-                        Cheat4Label = "<color=green>Cheat 4 ON</color>"; 
+                        Cheat4Label = "Cheat 4 ON"; 
                     } else { 
-                        Cheat4Label = "<color=red>Cheat 4 OFF</color>"; 
+                        Cheat4Label = "Cheat 4 OFF"; 
                     }
 			    }
 			}
