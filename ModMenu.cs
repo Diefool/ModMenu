@@ -10,14 +10,13 @@ using UnityEngine;
         I also usually delete this from my game-specific copy of the script because it just looks dumb :D
 */
 
+// I keep a note here with the Method used for the OnGUI call that I hook to call DrawMenu()
+// ModMenuSpace.ModMenu.DrawMenu() is called in method: << INSERT CLASS AND ONGUI METHOD HERE USED FOR HOOK>>
 
-
-
-    // I keep a note here with the Method used for the OnGUI call that I hook to call DrawMenu()
-// CHEAT 1 = Put Cheat 1 description and modified method text here
-// CHEAT 2 = Put Cheat 2 description and modified method text here
-// CHEAT 3 = Put Cheat 3 description and modified method text here
-// CHEAT 4 = Put Cheat 4 description and modified method text here
+// CHEAT 1 = Put Cheat 1 description and modified class and method text here
+// CHEAT 2 = Put Cheat 2 description and modified class and method text here
+// CHEAT 3 = Put Cheat 3 description and modified class and method text here
+// CHEAT 4 = Put Cheat 4 description and modified class and method text here
 
 namespace ModMenuSpace
 {
@@ -41,8 +40,6 @@ namespace ModMenuSpace
 			// DRAW THE MENU HERE
 
 			    // Toggle Menu button (always visible)
-			GUI.backgroundColor = new Color(1f,1f,1f,1f);
-			GUI.color = new Color(1f,1f,1f,1f);
 			if (GUI.Button(new Rect(0f,0f,100f,30f),"Toggle Menu"))
 			{
 				MenuVisible = !MenuVisible;
@@ -53,13 +50,9 @@ namespace ModMenuSpace
 			if (MenuVisible)
 			{
     			    // Cheat Header and Canvas
-                GUI.backgroundColor = new Color(1f,1f,1f,1f);
-			    GUI.color = new Color(1f,1f,1f,1f);
-				GUI.Box(new Rect(100f,0f,500f,400f),"Mod Menu");
+				GUI.Box(new Rect(100f,0f,500f,400f),MenuLabel);
 
                     // Cheat 1 Button
-                GUI.backgroundColor = new Color(32f,100f,25f,1f);
-				GUI.color = new Color(32f,100f,25f,1f);
                 if (GUI.Button(new Rect(100f,30f,180f,30f),Cheat1Label))
 			    {
 				    Cheat1Active = !Cheat1Active;
@@ -73,8 +66,6 @@ namespace ModMenuSpace
 			    }
 
 				    // Cheat 2 Button
-                GUI.backgroundColor = new Color(32f,150f,25f,1f);
-				GUI.color = new Color(32f,100f,25f,1f);
                 if (GUI.Button(new Rect(100f,60f,180f,30f),Cheat2Label))
 			    {
 				    Cheat2Active = !Cheat2Active;
@@ -88,8 +79,6 @@ namespace ModMenuSpace
 			    }
 
 				    // Cheat 3 Button
-                GUI.backgroundColor = new Color(32f,150f,25f,1f);
-				GUI.color = new Color(32f,100f,25f,1f);
                 if (GUI.Button(new Rect(100f,90f,180f,30f),Cheat3Label))
 			    {
 				    Cheat3Active = !Cheat3Active;
@@ -103,8 +92,6 @@ namespace ModMenuSpace
 			    }
 
 				    // Cheat 4 Button
-                GUI.backgroundColor = new Color(32f,150f,25f,1f);
-				GUI.color = new Color(32f,100f,25f,1f);
                 if (GUI.Button(new Rect(100f,120f,180f,30f),Cheat4Label))
 			    {
 				    Cheat4Active = !Cheat4Active;
